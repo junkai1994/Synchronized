@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 	private static ArrayBlockingQueue<Object> queue = new ArrayBlockingQueue<>(1);
 	private static Object o = new Object();
-	private static CountDownLatch latch = new CountDownLatch(1);
+//	private static CountDownLatch latch = new CountDownLatch(1);
 
 	public static void main(String[] args) {
 		final Container<File> container = (Container<File>) new FileContainer<File>();
@@ -29,7 +29,6 @@ public class Main {
 			public void run() {
 				try {
 					productor(container, new File("E:/Hearthstone"));
-					// latch.countDown();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
