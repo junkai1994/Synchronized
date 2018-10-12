@@ -20,7 +20,6 @@ public class FileContainer<E extends File> implements Container<E> {
 	private Condition consumer = lock.newCondition();
 	private volatile int count = 0;
 	private final int MAX_SIZE = 15;
-//	LinkedHashMap<String,File> map = new LinkedHashMap<>();
 	
 	public boolean add(E e) throws NotFileException{
 		boolean flag = false;
